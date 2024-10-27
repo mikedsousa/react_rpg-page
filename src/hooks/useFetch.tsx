@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
-import { IGameInfo } from '../interfaces/ICardInfo';
 
-const useFetch = (url: string) => {
-	const [data, setData] = useState<IGameInfo[]>([]);
+const useFetch = <T,>(url: string) => {
+	const [data, setData] = useState<T | null>(null);
 	const [error, setError] = useState<Error | null>(null);
 
 	useEffect(() => {
@@ -14,7 +13,6 @@ const useFetch = (url: string) => {
 				}
 				const result = await response.json();
 				setData(result);
-
 			} catch (error) {
 				console.error('Erro ao buscar dados:', error);
 				setError(error as Error);

@@ -6,12 +6,17 @@ import Section from '../../components/Section';
 import Games from '../../components/Games';
 
 import useFetch from '../../hooks/useFetch.tsx';
+import { IGameInfo } from '../../interfaces/ICardInfo.ts';
 
 const Home = () => {
 	const URL_API: string = 'https://blog-api-kj8x.onrender.com/api';
 	// const URL_API: string = 'http://localhost:3000/api';
 	
-	const { data } = useFetch(URL_API);
+	const { data } = useFetch<IGameInfo[]>(URL_API);
+
+	if(!data) {
+		return
+	}
 
 	return (
 		<>

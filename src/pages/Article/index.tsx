@@ -5,17 +5,16 @@ import styles from './Article.module.scss';
 import { IArticle } from '../../interfaces/IArticle.ts';
 import useFetch from '../../hooks/useFetch.tsx';
 import { returnTypeOfContent } from '../../utils/returnTypeOfContent.tsx';
-import { IGameInfo } from '../../interfaces/ICardInfo.ts';
 
 const Article = () => {
 	const { id } = useParams<{ id: string }>();
-	const [articleData, setArticleData] = useState<IGameInfo[]>([]);
+	const [articleData, setArticleData] = useState<IArticle[]>();
 	const navigate = useNavigate();
 
 	const URL_API: string = `https://blog-api-kj8x.onrender.com/api/${id}`;
 	// const URL_API: string = `http://localhost:3000/api/${id}`;
 
-	const { data, error } = useFetch(URL_API);
+	const { data, error } = useFetch<IArticle[]>(URL_API);
 
 	useEffect(() => {
 		if (error) {
