@@ -9,7 +9,6 @@ const StyledDiv = styled.div`
 	align-items: center;
 	justify-content: center;
 
-
 	margin-top: 2rem;
 	border-radius: 15px;
 
@@ -17,12 +16,12 @@ const StyledDiv = styled.div`
 	max-height: 470px;
 	background-color: #151e31;
 
-  div {
-    width: 100%;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-  }
+	div {
+		width: 100%;
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+	}
 
 	img {
 		width: 100%;
@@ -36,20 +35,25 @@ const StyledDiv = styled.div`
 		font-size: 1.5rem;
 	}
 
-  p {
-    margin-block: 1rem;
-    text-align: justify;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #CBD5E1;
-  }
-  
-  .read-more {
-    text-decoration: underline;
-    text-align: left;
-  }
+	h4 {
+		text-align: center;
+		font-size: 1.5rem;
+	}
+
+	p {
+		margin-block: 1rem;
+		text-align: justify;
+	}
+
+	a {
+		text-decoration: none;
+		color: #cbd5e1;
+	}
+
+	.read-more {
+		text-decoration: underline;
+		text-align: left;
+	}
 
 	.tags-container {
 		padding: 0;
@@ -84,22 +88,26 @@ const Games = ({ id, image, name, span, sinopse, tags }: props) => {
 
 	return (
 		<StyledDiv>
-			<img src={image} alt='teste'/>
+			<img src={image} alt="teste" />
 			<div>
-				<h3>
-				<Span color={color}>{span}</Span>	 <br /> {name}
-				</h3>
+				{span ? (
+					<h3>
+						<Span color={color}>{span}</Span> <br /> {name}
+					</h3>
+				) : (
+					<h4>{name}</h4>
+				)}
+
 				<p>{sinopse}</p>
-				<div className='tags-container'>
+				<div className="tags-container">
 					{/* <Span color={color}>Tags: </Span> */}
-					{
-						tags.map((tag, index) => (
-							<Tags key={index}>{tag}</Tags>
-						))
-					}
+					{tags.map((tag, index) => (
+						<Tags key={index}>{tag}</Tags>
+					))}
 				</div>
-        <Link to={`/blog/${id}`}><span className='read-more'>Leia mais</span></Link>
-        
+				<Link to={`/blog/${id}`}>
+					<span className="read-more">Leia mais</span>
+				</Link>
 			</div>
 		</StyledDiv>
 	);
@@ -108,10 +116,10 @@ const Games = ({ id, image, name, span, sinopse, tags }: props) => {
 export default Games;
 
 interface props {
-  id: string
+	id: string;
 	image: string;
 	name: string;
-	span: string;
+	span?: string;
 	sinopse: string | undefined;
 	tags: string[];
 }

@@ -14,7 +14,7 @@
 	}
 
 	.icon, .menu {
-		color: #22d3ee;
+		color: $light-blue;
 		font-size: 1.8rem;
 	}
 
@@ -25,7 +25,7 @@
 	}
 	
 	.open {
-		border: 2px solid #22d3ee;
+		border: 2px solid $light-blue;
 		border-radius: 5px;
 	}
 
@@ -38,7 +38,7 @@
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		color: black;
+		color: $black;
 	}
 
 	nav {
@@ -59,10 +59,10 @@
 				text-decoration: none;
 				font-size: 1.5rem;
 				font-weight: bold;
-				color: #CBD5E1;
+				color: $off-white;
 
 				&.active {
-					color: #22d3ee;
+					color: $light-blue;
 				}
 			}
 		}

@@ -5,20 +5,13 @@ import Span from '../../components/Span';
 import Section from '../../components/Section';
 import Games from '../../components/Games';
 
-import { IGameInfo } from '../../interfaces/ICardInfo.ts';
 import useFetch from '../../hooks/useFetch.tsx';
 
 const Home = () => {
 	const URL_API: string = 'https://blog-api-kj8x.onrender.com/api';
 	// const URL_API: string = 'http://localhost:3000/api';
-
+	
 	const { data } = useFetch(URL_API);
-
-	const games: IGameInfo[] = data;
-
-	if (!data) {
-		return <p>Loading...</p>;
-	}
 
 	return (
 		<>
@@ -42,7 +35,7 @@ const Home = () => {
 				</div>
 			</section>
 			<Section title="Campanhas " span="atuais">
-				{games
+				{data
 					.filter(
 						(info) =>
 							info.type === 'campanha' &&

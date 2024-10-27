@@ -5,6 +5,7 @@ import { FiLinkedin } from "react-icons/fi";
 
 
 const StyledFooter = styled.footer`
+  
   display: flex;
   flex-direction: column;
   gap: 1rem;

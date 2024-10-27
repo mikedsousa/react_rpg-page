@@ -5,6 +5,7 @@ import NotFound from './pages/NotFound';
 import { GlobalStyles } from './global/styles/GlobalStyles';
 import Article from './pages/Article';
 import Building from './pages/Building';
+import Blog from './pages/Blog';
 
 const AppRoutes = () => {
 	return (
@@ -14,11 +15,11 @@ const AppRoutes = () => {
 				<Routes>
 					<Route path="/" element={<Base />}>
 						<Route index element={<Home />} />
-						<Route path="/*" element={<NotFound />} />
-						<Route path="blog/:id" element={<Article />} />
-						<Route path="blog" element={<Building />} />
 						<Route path="form" element={<Building />} />
 						<Route path="about" element={<Building />} />
+						<Route path="blog" element={<Blog />} />
+						<Route path="blog/:id" element={<Article />} />
+						<Route path="/*" element={<NotFound />} />
 					</Route>
 				</Routes>
 			</BrowserRouter>
