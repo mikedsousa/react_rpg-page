@@ -11,8 +11,8 @@ const Article = () => {
 	const [articleData, setArticleData] = useState<IArticle[]>();
 	const navigate = useNavigate();
 
-	// const URL_API: string = `https://blog-api-kj8x.onrender.com/api/${id}`;
-	const URL_API: string = `http://localhost:3000/api/${id}`;
+	const URL_API: string = `https://blog-api-kj8x.onrender.com/api/${id}`;
+	// const URL_API: string = `http://localhost:3000/api/${id}`;
 
 	const { data, error } = useFetch<IArticle[]>(URL_API);
 
