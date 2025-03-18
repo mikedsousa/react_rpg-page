@@ -18,7 +18,6 @@ const StyledSpan = styled.span<{$color: string}>`
     }
   }};
 	background-clip: text;
-	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	color: black;
