@@ -88,7 +88,7 @@ const Games = ({ id, image, name, span, sinopse, tags }: props) => {
 
 	return (
 		<StyledDiv>
-			<img src={image} alt="teste" />
+			<img src={image} />
 			<div>
 				{span ? (
 					<h3>
@@ -100,7 +100,6 @@ const Games = ({ id, image, name, span, sinopse, tags }: props) => {
 
 				<p>{sinopse}</p>
 				<div className="tags-container">
-					{/* <Span color={color}>Tags: </Span> */}
 					{tags.map((tag, index) => (
 						<Tags key={index}>{tag}</Tags>
 					))}

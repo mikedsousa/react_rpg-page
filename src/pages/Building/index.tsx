@@ -24,7 +24,7 @@ const BuildingGif = styled.div`
 
 	img {
 		width: 80vw;
-		max-width: 600px;
+		max-width: 60vh;
 	}
 `;
 
