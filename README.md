@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# Grimmkin's Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao repositório do **Grimmkin's Page**, um projeto de landing page interativa para RPGs, com foco em sistemas como *Dungeons & Dragons*, *Mutante: Ano Zero* e *Vaesen RPG*. Este projeto foi desenvolvido com React, TypeScript e Styled Components, utilizando Vite como bundler.
 
-Currently, two official plugins are available:
+## 📋 Índice
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Funcionalidades](#funcionalidades)
+- [Licença](#licença)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 📝 Sobre o Projeto
 
-- Configure the top-level `parserOptions` property like this:
+O objetivo do **Grimmkin's Page** é criar uma plataforma para divulgar campanhas de RPG, artigos e informações sobre sistemas de RPG. A página é responsiva e utiliza boas práticas de desenvolvimento front-end, como componentização e estilização modular.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🚀 Tecnologias Utilizadas
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Este projeto foi desenvolvido com as seguintes tecnologias:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **React**: Biblioteca para construção de interfaces de usuário.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+- **Styled Components**: Biblioteca para estilização de componentes.
+- **React Router DOM**: Gerenciamento de rotas no React.
+- **Vite**: Ferramenta de build rápida e moderna.
+- **SASS**: Pré-processador CSS para estilização modular.
+- **ESLint**: Ferramenta de linting para manter a qualidade do código.
+
+---
+
+
+## 🌟 Funcionalidades
+- **Página Inicial**: Apresentação do projeto e campanhas atuais.
+- **Blog**: Listagem de artigos e campanhas.
+- **Artigos Dinâmicos**: Renderização de artigos com diferentes tipos de conteúdo (parágrafos, imagens, links, etc.).
+- **Formulário de Inscrição**: Integração com um formulário externo.
+- **Página de Construção**: Exibição de páginas em desenvolvimento.
+- **Página 404**: Tratamento de rotas inexistentes.
+
+## 📞 Contato
+Desenvolvido por [Mike d'Sousa](https://www.linkedin.com/in/mike-de-sousa/). Entre em contato para dúvidas ou sugestões!
