@@ -56,7 +56,7 @@ const Home = () => {
           <>
             <Span color="blue">
               Os goblins estão trazendo os dados. Favor, aguardar alguns
-              intantes...
+              instantes...
             </Span>
           </>
         )}
