@@ -1,6 +1,6 @@
-# Grimmkin's Page
+# Grimmkin's Keep
 
-Bem-vindo ao repositório do **Grimmkin's Page**, um projeto de landing page interativa para RPGs, com foco em sistemas como *Dungeons & Dragons*, *Mutante: Ano Zero* e *Vaesen RPG*. Este projeto foi desenvolvido com React, TypeScript e Styled Components, utilizando Vite como bundler.
+Bem-vindo ao repositório do **Grimmkin's Keep**, um projeto de landing page interativa para RPGs, com foco em sistemas como *Dungeons & Dragons*, *Mutante: Ano Zero* e *Vaesen RPG*. Este projeto foi desenvolvido com React, TypeScript e Styled Components, utilizando Vite como bundler.
 
 ## 📋 Índice
 

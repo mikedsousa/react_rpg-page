@@ -20,7 +20,7 @@ const Header = () => {
 				<div className={styles.container}>
 					<FaDiceD20 className={styles.icon} />
 					<NavLink to="/">
-						<h2>Grimmkin's Page</h2>
+						<h2>Grimmkin’s Keep</h2>
 					</NavLink>
 				</div>
 				<Navbar />
