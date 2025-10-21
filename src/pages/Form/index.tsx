@@ -1,18 +1,32 @@
-import styled from "styled-components";
-
-const StyledIframe = styled.iframe`
-  min-width: 100%;
-  height: 100vh;
-  border: none;
-  background-color: transparent;
-`;
+import styles from "./Form.module.scss";
 
 const Form = () => {
   return (
     <>
-      <StyledIframe
-        src="https://0cyl6y6s.forms.app/form/67d9f48f3aaa500002d8baca"
-      ></StyledIframe>
+      <form className={styles.form}>
+        <fieldset className={styles.form_control}>
+          <legend className={styles.form_control__title}>
+            Requisitos da plataforma
+          </legend>
+          <p className={styles.form_control__text}>
+            Antes de tudo, minhas mesas acontecem na plataforma FoundryVTT, que
+            infelizmente não possui suporte para dispositivos móveis, sendo
+            assim necessário ter um computador para poder participar das
+            sessões.
+          </p>
+          <p className={styles.form_control__text}>
+            Ao enviar esse formulário, você confirma que possui um computador
+            com os requisitos mínimos para a plataforma!
+          </p>
+        </fieldset>
+        <fieldset className={styles.form_control}>
+          <div>
+            <legend className={styles.form_control__title}>Dados</legend>
+            <span>Não o de rolar...</span>
+          </div>
+          
+        </fieldset>
+      </form>
     </>
   );
 };
