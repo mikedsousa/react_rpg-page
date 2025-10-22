@@ -15,13 +15,18 @@ const StyledLabel = styled.label`
 
   input {
     outline: none;
+    border: none;
     max-width: 200px;
+    border-radius: 5px;
   }
 
   textarea {
+    border: none;
+    border-radius: 8px;
     height: 100px;
     outline: none;
     max-width: 400px;
+    resize: none;
   }
 `;
 
